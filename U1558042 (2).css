@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 與 CSS 分離範例</title>
+    <!-- 引入外部 CSS 檔案 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 頁頭 -->
+    <header class="navbar">
+        <div class="logo">我的網站</div>
+        <nav>
+            <a href="#">首頁</a>
+            <a href="#">服務項目</a>
+            <a href="#">關於我們</a>
+            <a href="#">聯絡我們</a>
+        </nav>
+    </header>
+
+    <!-- 主要內容區 -->
+    <main class="content-container">
+        <section class="hero-card">
+            <h1>歡迎來到我們的網站</h1>
+            <p>這是一個將 HTML 結構與外部 CSS 樣式徹底分離的簡單結構範例。</p>
+            <button class="primary-btn">開始探索</button>
+        </section>
+
+        <section class="features">
+            <div class="feature-box">
+                <h2>結構清晰</h2>
+                <p>HTML 專注於網頁內容與結構，不包含任何樣式碼。</p>
+            </div>
+            <div class="feature-box">
+                <h2>易於維護</h2>
+                <p>將 CSS 獨立成一個檔案後，修改全站樣式更加方便。</p>
+            </div>
+            <div class="feature-box">
+                <h2>提升載入速度</h2>
+                <p>瀏覽器可以快取 CSS 檔案，減少重複下載時間。</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
