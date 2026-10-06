@@ -1,0 +1,651 @@
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    background: #fff8fb;
+    color: #4d3d45;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+nav {
+    width: 100%;
+    height: 70px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(200, 130, 160, 0.12);
+}
+
+
+/* Logo */
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+
+    color: #e88eae;
+
+    letter-spacing: 2px;
+}
+
+
+/* 導覽連結 */
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: #65515b;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e88eae;
+}
+
+
+/* 購物袋 */
+
+.cart {
+    background: #ffe3ee;
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    color: #d96691;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   首頁 Hero
+========================= */
+
+.hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f6,
+            #fff9fb,
+            #f7efff
+        );
+}
+
+
+.hero-content {
+    max-width: 800px;
+}
+
+
+.hero-small {
+    color: #d77e9e;
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h1 {
+    font-size: 60px;
+
+    color: #4d3d45;
+
+    margin-bottom: 20px;
+
+    line-height: 1.25;
+}
+
+
+.hero h1 span {
+    color: #e88eae;
+}
+
+
+.hero p {
+    font-size: 18px;
+
+    color: #806c75;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+
+/* Hero 按鈕 */
+
+.hero-btn {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background: #e88eae;
+
+    color: white;
+
+    padding: 15px 35px;
+
+    border-radius: 40px;
+
+    font-size: 16px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(232, 142, 174, 0.3);
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    transform: translateY(-3px);
+
+    background: #dc779c;
+}
+
+
+/* =========================
+   美甲商品區
+========================= */
+
+.products-section {
+    padding: 90px 8%;
+
+    background: #ffffff;
+}
+
+
+/* 標題 */
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+
+    color: #4d3d45;
+
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #9b858e;
+}
+
+
+/* =========================
+   分類按鈕
+========================= */
+
+.categories {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 40px;
+}
+
+
+.category-btn {
+    border: none;
+
+    background: #fff0f5;
+
+    color: #c96f90;
+
+    padding: 10px 22px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.category-btn:hover,
+.category-btn.active {
+    background: #e88eae;
+
+    color: white;
+}
+
+
+/* =========================
+   商品 Grid
+========================= */
+
+.products {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================
+   商品卡片
+========================= */
+
+.product-card {
+    background: white;
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(100, 70, 80, 0.08);
+
+    transition: 0.3s;
+
+    border: 1px solid #f7e8ee;
+}
+
+
+.product-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(100, 70, 80, 0.13);
+}
+
+
+/* 商品圖片 */
+
+.product-image {
+    width: 100%;
+
+    height: 270px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+
+.product-card:hover .product-image {
+    transform: scale(1.03);
+}
+
+
+/* 商品文字 */
+
+.product-info {
+    padding: 20px;
+}
+
+
+/* 標籤 */
+
+.tag {
+    display: inline-block;
+
+    background: #fff0f5;
+
+    color: #d87599;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    margin-bottom: 10px;
+}
+
+
+/* 商品名稱 */
+
+.product-info h3 {
+    font-size: 18px;
+
+    margin-bottom: 8px;
+
+    color: #4d3d45;
+}
+
+
+/* 商品介紹 */
+
+.product-info p {
+    font-size: 13px;
+
+    color: #927d85;
+
+    line-height: 1.6;
+
+    min-height: 42px;
+
+    margin-bottom: 15px;
+}
+
+
+/* 價格 + 按鈕 */
+
+.product-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+/* 價格 */
+
+.price {
+    color: #df6f99;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+
+/* 加入購物袋 */
+
+.add-btn {
+    border: none;
+
+    background: #4d3d45;
+
+    color: white;
+
+    padding: 9px 14px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.add-btn:hover {
+    background: #e88eae;
+}
+
+
+/* =========================
+   關於我們
+========================= */
+
+.about {
+    padding: 90px 8%;
+
+    background: #fff4f8;
+
+    text-align: center;
+}
+
+
+.about-box {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+
+.about h2 {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+
+.about p {
+    color: #806c75;
+
+    line-height: 2;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   三個特色
+========================= */
+
+.features {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 60px;
+
+    margin-top: 40px;
+
+    flex-wrap: wrap;
+}
+
+
+.feature {
+    width: 150px;
+}
+
+
+.feature-icon {
+    font-size: 35px;
+
+    margin-bottom: 10px;
+}
+
+
+.feature h4 {
+    color: #5a464f;
+
+    margin-bottom: 5px;
+}
+
+
+.feature p {
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    background: #4d3d45;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+
+.footer-logo {
+    color: #ffb6d0;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+
+footer p {
+    font-size: 12px;
+
+    color: #d9cbd0;
+}
+
+
+/* =========================
+   購物袋提示
+========================= */
+
+.message {
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    background: #4d3d45;
+
+    color: white;
+
+    padding: 15px 22px;
+
+    border-radius: 12px;
+
+    display: none;
+
+    z-index: 2000;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   平板
+========================= */
+
+@media (max-width: 1000px) {
+
+    .products {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================
+   手機
+========================= */
+
+@media (max-width: 750px) {
+
+    nav {
+        padding: 0 5%;
+    }
+
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    .hero p {
+        font-size: 15px;
+    }
+
+
+    .products {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .product-image {
+        height: 230px;
+    }
+
+}
+
+
+/* =========================
+   小手機
+========================= */
+
+@media (max-width: 500px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+
+    .product-image {
+        height: 320px;
+    }
+
+
+    .features {
+        gap: 30px;
+    }
+
+}

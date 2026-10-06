@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NAIL POP!｜女生的美甲小店</title>
+
+    <!-- 連接 CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <div class="logo">
+            NAIL POP! 💅
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#nails">美甲款式</a></li>
+            <li><a href="#about">關於我們</a></li>
+        </ul>
+
+        <div class="cart">
+            🛍️ 購物袋
+            <span id="cart-count">0</span>
+        </div>
+    </nav>
+
+
+    <!-- 首頁 -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <div class="hero-small">
+                NAIL ART · YOUR STYLE
+            </div>
+
+            <h1>
+                今天也要<br>
+                <span>漂亮到發光！✨</span>
+            </h1>
+
+            <p>
+                為喜歡漂亮指尖的女孩們準備的美甲小店。<br>
+                甜美、夢幻、氣質、個性，找到最適合你的那一款。
+            </p>
+
+            <a href="#nails" class="hero-btn">
+                探索美甲款式 →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- 美甲款式 -->
+    <section class="products-section" id="nails">
+
+        <div class="section-title">
+
+            <h2>✨ 熱門美甲款式</h2>
+
+            <p>
+                挑選一款，讓今天的自己更加閃耀
+            </p>
+
+        </div>
+
+
+        <!-- 分類按鈕 -->
+        <div class="categories">
+
+            <button
+                class="category-btn active"
+                onclick="filterProducts('all', this)">
+                全部
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('sweet', this)">
+                甜美系
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('elegant', this)">
+                氣質系
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('cat-eye', this)">
+                貓眼系
+            </button>
+
+            <button
+                class="category-btn"
+                onclick="filterProducts('cool', this)">
+                個性系
+            </button>
+
+        </div>
+
+
+        <!-- 商品列表 -->
+        <div class="products">
+
+
+            <!-- 01 -->
+            <div class="product-card sweet">
+
+                <img
+                    src="images/01.jpg"
+                    alt="粉色漸層花朵款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">甜美系</span>
+
+                    <h3>粉色漸層花朵款</h3>
+
+                    <p>
+                        溫柔粉色漸層搭配立體小花與細緻水鑽，甜美浪漫。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$399</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('粉色漸層花朵款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 02 -->
+            <div class="product-card cat-eye">
+
+                <img
+                    src="images/02.jpg"
+                    alt="藍色貓眼星空款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">貓眼系</span>
+
+                    <h3>藍色貓眼星空款</h3>
+
+                    <p>
+                        深藍貓眼搭配星星與銀色細節，神秘有質感。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$429</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('藍色貓眼星空款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 03 -->
+            <div class="product-card sweet">
+
+                <img
+                    src="images/03.jpg"
+                    alt="紫色漸層蝴蝶款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">甜美系</span>
+
+                    <h3>紫色漸層蝴蝶款</h3>
+
+                    <p>
+                        柔和紫色漸層搭配蝴蝶與水鑽，夢幻仙氣。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$459</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('紫色漸層蝴蝶款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 04 -->
+            <div class="product-card cool">
+
+                <img
+                    src="images/04.jpg"
+                    alt="紅色亮片水鑽款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">個性系</span>
+
+                    <h3>紅色亮片水鑽款</h3>
+
+                    <p>
+                        鮮紅色搭配亮片、愛心與水鑽，華麗吸睛。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$449</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('紅色亮片水鑽款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 05 -->
+            <div class="product-card elegant">
+
+                <img
+                    src="images/05.jpg"
+                    alt="灰色大理石紋款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">氣質系</span>
+
+                    <h3>灰色大理石紋款</h3>
+
+                    <p>
+                        高級灰搭配大理石紋、銀色線條與少量水鑽，低調高級。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$429</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('灰色大理石紋款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 06 -->
+            <div class="product-card elegant">
+
+                <img
+                    src="images/06.jpg"
+                    alt="裸色金邊款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">氣質系</span>
+
+                    <h3>裸色金邊款</h3>
+
+                    <p>
+                        自然裸色搭配金色線條與細小水鑽，簡約顯白。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$399</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('裸色金邊款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 07 -->
+            <div class="product-card sweet">
+
+                <img
+                    src="images/07.jpg"
+                    alt="透明底閃粉款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">甜美系</span>
+
+                    <h3>透明底閃粉款</h3>
+
+                    <p>
+                        透明底搭配細碎閃粉與立體花朵，清新少女感。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$379</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('透明底閃粉款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 08 -->
+            <div class="product-card cat-eye">
+
+                <img
+                    src="images/08.jpg"
+                    alt="綠色貓眼款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">貓眼系</span>
+
+                    <h3>綠色貓眼款</h3>
+
+                    <p>
+                        深綠貓眼搭配金色細節與水鑽，神秘又有個性。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$439</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('綠色貓眼款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 09 -->
+            <div class="product-card sweet">
+
+                <img
+                    src="images/09.jpg"
+                    alt="橘色漸層小花款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">甜美系</span>
+
+                    <h3>橘色漸層小花款</h3>
+
+                    <p>
+                        溫暖橘色漸層搭配粉嫩小花與水鑽，活潑甜美。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$389</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('橘色漸層小花款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 10 -->
+            <div class="product-card cool">
+
+                <img
+                    src="images/10.jpg"
+                    alt="黑色漸層水鑽款"
+                    class="product-image"
+                >
+
+                <div class="product-info">
+
+                    <span class="tag">個性系</span>
+
+                    <h3>黑色漸層水鑽款</h3>
+
+                    <p>
+                        黑色漸層搭配銀色蝴蝶與水鑽，華麗又帶有酷感。
+                    </p>
+
+                    <div class="product-bottom">
+
+                        <span class="price">$469</span>
+
+                        <button
+                            class="add-btn"
+                            onclick="addToCart('黑色漸層水鑽款')">
+                            加入購物袋
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- 關於我們 -->
+    <section class="about" id="about">
+
+        <div class="about-box">
+
+            <h2>💗 關於 NAIL POP!</h2>
+
+            <p>
+                NAIL POP! 是一個為年輕女孩打造的美甲品牌，
+                希望每個女孩都可以透過指尖的小細節，
+                展現自己的風格與自信。
+                <br><br>
+                不論你喜歡甜美、夢幻、氣質還是個性，
+                都可以在這裡找到屬於自己的美甲。
+            </p>
+
+
+            <div class="features">
+
+                <div class="feature">
+
+                    <div class="feature-icon">💅</div>
+
+                    <h4>多種款式</h4>
+
+                    <p>
+                        甜美、氣質、個性風格一次滿足
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">✨</div>
+
+                    <h4>精緻設計</h4>
+
+                    <p>
+                        每一個細節都用心打造
+                    </p>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">💗</div>
+
+                    <h4>女孩專屬</h4>
+
+                    <p>
+                        找到最適合自己的美甲風格
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            NAIL POP! 💅
+        </div>
+
+        <p>
+            © 2026 NAIL POP! Nail Art Shop. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- 加入購物袋提示 -->
+    <div class="message" id="message">
+        已加入購物袋！💗
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+
+        let cartCount = 0;
+
+
+        /* 加入購物袋 */
+        function addToCart(productName) {
+
+            cartCount++;
+
+            document.getElementById("cart-count").textContent = cartCount;
+
+            const message = document.getElementById("message");
+
+            message.textContent =
+                productName + " 已加入購物袋！💗";
+
+            message.style.display = "block";
+
+
+            setTimeout(function() {
+
+                message.style.display = "none";
+
+            }, 2000);
+
+        }
+
+
+        /* 商品分類 */
+        function filterProducts(category, button) {
+
+            const products =
+                document.querySelectorAll(".product-card");
+
+            const buttons =
+                document.querySelectorAll(".category-btn");
+
+
+            /* 移除其他按鈕的 active */
+            buttons.forEach(function(btn) {
+
+                btn.classList.remove("active");
+
+            });
+
+
+            /* 加入目前按鈕 active */
+            button.classList.add("active");
+
+
+            /* 顯示商品 */
+            products.forEach(function(product) {
+
+                if (category === "all") {
+
+                    product.style.display = "block";
+
+                } else {
+
+                    if (product.classList.contains(category)) {
+
+                        product.style.display = "block";
+
+                    } else {
+
+                        product.style.display = "none";
+
+                    }
+
+                }
+
+            });
+
+        }
+
+    </script>
+
+</body>
+
+</html>
